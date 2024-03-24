@@ -1,7 +1,15 @@
-// lower case
-var personName = "Eric";
-console.log("lowercase:", personName.toLowerCase());
-// uppercase
-console.log("uppercase:", personName.toUpperCase());
-// titlecase
-console.log("tiltlecase:", personName.replace(/\bw/g, function (c) { return c.toUpperCase(); }));
+"use strict";
+let personName = "YUMNA";
+let LowerCase = personName.toLowerCase();
+let UpperCase = personName.toUpperCase();
+let TitleCase = personName.split(``).map(word => word.charAt(0).toUpperCase() +
+    word.slice(1).toLowerCase()).join(` `);
+if (personName !== null && personName !== ``) {
+    console.log(`Hello ${personName},here are your name in :
+    LowerCase : ${LowerCase}
+    UpperCase : ${UpperCase}
+    TitleCase : ${TitleCase}`);
+}
+else {
+    console.log(`Please fill your name ! `);
+}
